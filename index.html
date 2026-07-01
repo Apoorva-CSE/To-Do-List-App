@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List | Stay Organized</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Decorative background blobs (pure CSS, no images) -->
+  <div class="bg-blob blob-one"></div>
+  <div class="bg-blob blob-two"></div>
+
+  <main class="app-wrapper">
+
+    <!-- Glassmorphism Card -->
+    <section class="todo-card">
+
+      <!-- Header / Title -->
+      <header class="todo-header">
+        <h1 class="todo-title">
+          <span class="title-icon">✓</span>
+          My To-Do List
+        </h1>
+        <p class="todo-subtitle">Plan your day, one task at a time.</p>
+      </header>
+
+      <!-- Input Section -->
+      <div class="input-section">
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="What do you need to do?"
+          autocomplete="off"
+        />
+        <button id="addTaskBtn" class="add-btn" type="button">
+          <span class="add-icon">+</span> Add Task
+        </button>
+      </div>
+
+      <!-- Task Stats -->
+      <div class="task-stats" id="taskStats">
+        <span id="totalCount">0 tasks</span>
+        <span id="completedCount">0 completed</span>
+      </div>
+
+      <!-- Task List Section -->
+      <ul id="taskList" class="task-list">
+        <!-- Tasks are dynamically inserted here by script.js -->
+      </ul>
+
+      <!-- Empty state message (shown/hidden via JS) -->
+      <p id="emptyState" class="empty-state">No tasks available. Add one above! ✨</p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Built with HTML, CSS &amp; JavaScript &mdash; &copy; <span id="year"></span> To-Do List Web App</p>
+    </footer>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
